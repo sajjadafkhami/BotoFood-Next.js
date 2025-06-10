@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router'
 import React from 'react'
+import DetailsPage from '../../components/templates/DetailsPage';
 
 function Details({data}) {
     const router = useRouter();
@@ -8,7 +9,9 @@ function Details({data}) {
         return <h2>Loading Page...</h2>
     }
   return (
-    <div>Details</div>
+    <div>
+        <DetailsPage {...data} />
+    </div>
   )
 }
 
@@ -19,7 +22,7 @@ export async function getStaticPaths() {
     const json = await res.json()
     const data = json.slice(0, 10);
 
-    const paths = data.map(food => ({params: {id: food.id.tostring()}}))
+    const paths = data.map(food => ({params: {id: food.id.toString()}}))
 
     return {
         paths: paths,
