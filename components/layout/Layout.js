@@ -1,5 +1,5 @@
 import styles from "./Layout.module.css"
-import LinK from "next/linK"
+import Link from 'next/link' 
 
 import React from 'react'
 
@@ -8,11 +8,11 @@ function Layout({children}) {
     <>
     <div className={styles.header}>
         <div className={styles.left}>
-            <LinK href="/">BotoFood</LinK>
+            <Link href="/">BotoFood</Link>
         </div>
         <div className={styles.right}>
-            <LinK href="/menu">Menu</LinK>
-            <LinK href="/categories">Categories</LinK>
+            <Link href="/menu">Menu</Link>
+            <Link href="/categories">Categories</Link>
         </div>
     </div>
     <div className={styles.container}>{children}</div>

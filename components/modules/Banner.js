@@ -1,6 +1,6 @@
 
 import styles from "./Banner.module.css";
-import LinK from "next/linK"
+import Link from 'next/link' 
 
 function Banner() {
   return (
@@ -13,7 +13,7 @@ function Banner() {
           Uber in 2014. Meals are delivered by couriers using cars, scooters,
           bikes, or on foot.
         </span>
-        <LinK href="/menu">See All</LinK>
+        <Link href="/menu">See All</Link>
       </div>
       <div className={styles.right}>
         <img src="/images/banner.png" alt="Food image"/>

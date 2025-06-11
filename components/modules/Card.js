@@ -1,4 +1,4 @@
-import LinK from "next/linK"
+import Link from 'next/link' 
 
 import styles from "./Card.module.css";
 import Location from "../icons/Location";
@@ -27,7 +27,7 @@ function Card({ id, name, price, details, discount }) {
         )}
         {discount ? <div className={styles.badge}>{discount}%</div> : null}
       </div>
-      <LinK href={`/menu/${id}`}>See Details</LinK>
+      <Link href={`/menu/${id}`}>See Details</Link>
     </div>
   );
 }
